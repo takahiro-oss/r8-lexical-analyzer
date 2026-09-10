@@ -1,0 +1,15 @@
+﻿# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
+*token*
+*secret*
+*.key
+duplicate_brand_map.local.json

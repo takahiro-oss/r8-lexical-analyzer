@@ -1,0 +1,21 @@
+# Third-party packages required by the analysis scripts in scripts/.
+#
+# Developed and run on CPython 3.14. No version is pinned, deliberately: each
+# script gates its own output against recorded values and reports FAIL rather
+# than a silently different number, so a dependency version that changed a
+# result would be caught by the run itself rather than hidden by a pin.
+#
+# Which script needs what:
+#   kappa_compute.py            numpy, pandas, scikit-learn
+#   human_kappa_compute.py      numpy, scikit-learn
+#   subgroup_kappa_compute.py   numpy, scikit-learn
+#   run_stability_compute.py    standard library only
+#   verify_public_bundle.py     standard library only
+#
+# openpyxl is NOT listed. It is imported only inside the branch that reads the
+# annotation workbooks, which are not part of the public data bundle. Working
+# from the bundle, that branch is unreachable and the package is not needed.
+
+numpy
+pandas
+scikit-learn
