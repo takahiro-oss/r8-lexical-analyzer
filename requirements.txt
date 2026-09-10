@@ -11,6 +11,11 @@
 #   subgroup_kappa_compute.py   numpy, scikit-learn
 #   run_stability_compute.py    standard library only
 #   verify_public_bundle.py     standard library only
+#   permutation_pairs_compute.py  numpy
+#   recount_corpus_r196.py      scipy
+#   table4_recount.py           pandas
+#   the other nine scripts listed in README under "recomputation of further
+#   reported values": standard library only
 #
 # openpyxl is NOT listed. It is imported only inside the branch that reads the
 # annotation workbooks, which are not part of the public data bundle. Working
@@ -19,3 +24,4 @@
 numpy
 pandas
 scikit-learn
+scipy

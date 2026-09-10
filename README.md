@@ -68,6 +68,27 @@ specific author's intent or character.
   `run_stability_compute.py`, `verify_public_bundle.py`). These computed
   the reliability figures reported in the manuscript and verify the
   archived bundle; they read the Zenodo bundle named above.
+- `scripts/` — recomputation of further reported values from the same
+  bundle. Each script checks its output against the values recorded for
+  the manuscript and exits non-zero if any check fails. Some also contain a
+  mode that reads internal files which are not released; that mode is not
+  needed to reproduce the reported values. With the bundle unpacked in
+  `<bundle>`:
+
+  ```
+  python scripts/table2_recount.py --public_master <bundle>/corpus_master.csv
+  python scripts/table2_hp60_recount_r196.py --public_master <bundle>/corpus_master.csv
+  python scripts/table3_recount.py --public_master <bundle>/corpus_master.csv
+  python scripts/table4_recount.py --frozen_dir <bundle> --public_check
+  python scripts/table4_human_recount.py --public_master <bundle>/corpus_master.csv
+  python scripts/verify_table4_crosstab.py --bundle_dir <bundle>
+  python scripts/phase1_calibration_recount.py --public_master <bundle>/corpus_master.csv
+  python scripts/recount_corpus_r196.py --public_master <bundle>/corpus_master.csv --rater1 <bundle>/rater1_labels.csv
+  python scripts/document_level_values_recount.py --public_master <bundle>/corpus_master.csv --r8py r8.py
+  python scripts/permutation_pairs_compute.py --public_dir <bundle>
+  python scripts/reason_code_mcnemar.py --public_dir <bundle>
+  python scripts/short_form_rater_labels.py --master <bundle>/corpus_master.csv --rater1 <bundle>/rater1_labels.csv --rater2 <bundle>/rater2_labels.csv
+  ```
 - `requirements.txt` — third-party packages required to run the above
 - `docs/drafts/` — annotation criteria v0.8 (current) and v0.7.1 (the version
   in use during the calibration reported in the manuscript), with the v0.8
@@ -82,7 +103,7 @@ defined over LF content.
 The Zenodo record is authoritative for reproducing the values reported in the
 manuscript, and holds the frozen dataset corresponding to them. This
 repository reflects continuing development and is not version-bound to those
-figures. To reproduce the reported figures, use the tag `manuscript-v1.9`,
+figures. To reproduce the reported figures, use the tag `manuscript-v1.9-2`,
 which the bundle MANIFEST also names.
 
 Original texts are not redistributed: the source documents are third-party
