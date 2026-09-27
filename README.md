@@ -90,6 +90,27 @@ specific author's intent or character.
   python scripts/short_form_rater_labels.py --master <bundle>/corpus_master.csv --rater1 <bundle>/rater1_labels.csv --rater2 <bundle>/rater2_labels.csv
   ```
 - `requirements.txt` — third-party packages required to run the above
+- `scripts/` — producers of the remaining reported values. They read
+  internal frozen files, pinned by SHA256, that are not released (the corpus
+  texts, the unmasked corpus table, the annotator package), so they cannot be
+  rerun from the bundle; they are published so that each computation can be
+  read: `fn_saturation_counterfactual.py` (Section 6.2 saturation
+  counterfactual), `pr_wilson_ci.py` (Wilson intervals, Section 4.3),
+  `table5_recount_205.py` (Table 5), `plos_figures.py` (Figs 1-3),
+  `llm_input_truncation.py` (input truncation, Section 3.8),
+  `section58_recount.py` with `analyze_section58.py` (Section 5.8; the latter
+  holds the ten pattern definitions), `disclaimer_exploit_zero.py`,
+  `annotator_package_mapping.py`, and the corpus-construction steps
+  `dup_scan_containment.py`, `dup_scan_chargram.py`, `ad076_pair_compare.py`
+  and `freeze_corpus_clean.py`
+- `ailabel/` — the LLM pilot annotation scripts (`ailabel_claude.py`,
+  `ailabel_gemini.py`) that produced the run files in the bundle. API keys
+  are read from the environment; none is stored here. The published
+  `ailabel/ailabel_claude.py` differs from the version run for the
+  manuscript in one comment line, where a source title was replaced by a
+  placeholder; the SHA256 of that file pinned in
+  `scripts/llm_input_truncation.py` was updated to match. No executed line
+  differs.
 - `docs/drafts/` — annotation criteria v0.8 (current) and v0.7.1 (the version
   in use during the calibration reported in the manuscript), with the v0.8
   annotator guide and limitation note

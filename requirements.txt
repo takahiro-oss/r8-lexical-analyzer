@@ -17,6 +17,11 @@
 #   the other nine scripts listed in README under "recomputation of further
 #   reported values": standard library only
 #
+# Not installed by this file, needed only by the scripts that cannot be rerun
+# from the bundle: plos_figures.py needs matplotlib and pillow;
+# ailabel/ailabel_claude.py needs anthropic (and pymupdf for PDF input);
+# ailabel/ailabel_gemini.py needs google-generativeai.
+#
 # openpyxl is NOT listed. It is imported only inside the branch that reads the
 # annotation workbooks, which are not part of the public data bundle. Working
 # from the bundle, that branch is unreachable and the package is not needed.
