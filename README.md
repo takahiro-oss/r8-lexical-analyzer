@@ -110,7 +110,8 @@ specific author's intent or character.
   manuscript in one comment line, where a source title was replaced by a
   placeholder; the SHA256 of that file pinned in
   `scripts/llm_input_truncation.py` was updated to match. No executed line
-  differs.
+  of `ailabel/ailabel_claude.py` differs; in `scripts/llm_input_truncation.py`
+  only that pinned value differs.
 - `docs/drafts/` — annotation criteria v0.8 (current) and v0.7.1 (the version
   in use during the calibration reported in the manuscript), with the v0.8
   annotator guide and limitation note
