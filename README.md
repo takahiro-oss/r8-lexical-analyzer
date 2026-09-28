@@ -99,7 +99,8 @@ specific author's intent or character.
   `table5_recount_205.py` (Table 5), `plos_figures.py` (Figs 1-3),
   `llm_input_truncation.py` (input truncation, Section 3.8),
   `section58_recount.py` with `analyze_section58.py` (Section 5.8; the latter
-  holds the ten pattern definitions), `disclaimer_exploit_zero.py`,
+  holds the ten pattern definitions), `section58_cluster_extended.py`
+  (Section 5.8 six-cluster sensitivity analysis), `disclaimer_exploit_zero.py`,
   `annotator_package_mapping.py`, and the corpus-construction steps
   `dup_scan_containment.py`, `dup_scan_chargram.py`, `ad076_pair_compare.py`
   and `freeze_corpus_clean.py`
