@@ -6,7 +6,7 @@ Manipulation Index (CMI) computed from dictionary-based category densities.
 
 This repository holds the analysis code and the annotation criteria. The
 research data bundle (corpus-level data, per-run results, rater labels,
-codebook) is archived separately at Zenodo: 10.5281/zenodo.21928851.
+codebook) is archived separately at Zenodo: 10.5281/zenodo.23053370.
 Manuscript: 10.5281/zenodo.19306870.
 
 ## Licensing
